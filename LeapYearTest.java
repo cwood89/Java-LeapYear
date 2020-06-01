@@ -19,6 +19,11 @@ public class LeapYearTest {
   public final void shouldOnlyAcceptFourDigitNumbers() {
     LeapYear.checkYear("20201");
     LeapYear.checkYear("202");
+  }
 
+  @Test
+  public final void shouldDetermineIfGivenYearIsLeapYear() {
+    assertEquals(true, LeapYear.checkYear("2020"));
+    assertEquals(false, LeapYear.checkYear(2021));
   }
 }

@@ -10,7 +10,13 @@ public class LeapYear {
     if (y > 9999 || y < 1000) {
       throw new RuntimeException("Pick a correct year number.");
     }
-    return true;
+    if (y % 100 == 0 && y % 400 == 0) {
+      return true;
+    } else if (y % 4 == 0) {
+      return true;
+    } else {
+      return false;
+    }
   }
 
 }
