@@ -7,8 +7,8 @@ public class LeapYear {
     } else if (year instanceof Integer) {
       y = (Integer) year;
     }
-    if (y > 9999) {
-      throw new RuntimeException("Pick a smaller number.");
+    if (y > 9999 || y < 1000) {
+      throw new RuntimeException("Pick a correct year number.");
     }
     return true;
   }
