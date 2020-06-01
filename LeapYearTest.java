@@ -8,4 +8,10 @@ public class LeapYearTest {
   public final void shouldThrowExceptionIfNonNumberIsUsed() {
     LeapYear.checkYear("Two Thousand");
   }
+
+  @Test
+  public final void shouldAcceptStringsAndIntegers() {
+    assertEquals(true, LeapYear.checkYear("2020"));
+    assertEquals(true, LeapYear.checkYear(2020));
+  }
 }
